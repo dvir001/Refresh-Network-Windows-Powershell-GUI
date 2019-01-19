@@ -1,4 +1,4 @@
-# Refresh-Network-Windows-Powershell-GUI-Tool
+# Refresh-Network-Windows-Powershell-GUI-tool
 A simple tool to refrash your network cards using Powershell GUI
 
 ![alt text](https://i.imgur.com/gaBSOmV.png)
