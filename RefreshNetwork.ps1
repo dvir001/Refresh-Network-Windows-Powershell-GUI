@@ -1,10 +1,8 @@
-# Generated Form Function
 function Show-RefreshNetwork_psf
 {
 	# Import the Assemblies
 	[void][reflection.assembly]::Load('System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089')
 	[void][reflection.assembly]::Load('System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a')
-	#endregion Import Assemblies
 
 	# Form Objects
 	[System.Windows.Forms.Application]::EnableVisualStyles()
@@ -15,12 +13,9 @@ function Show-RefreshNetwork_psf
 	$checkboxFlushDNS = New-Object 'System.Windows.Forms.CheckBox'
 	$buttonOK = New-Object 'System.Windows.Forms.Button'
 	$InitialFormWindowState = New-Object 'System.Windows.Forms.FormWindowState'
-	#endregion Generated Form Objects
 
 	# Script
-	$formRefreshNetwork_Load = {
-		# Empty
-	}
+	$formRefreshNetwork_Load = { # Empty }
 	
 	$buttonOK_MouseClick = [System.Windows.Forms.MouseEventHandler]{
 		# Event Argument: $_ = [System.Windows.Forms.MouseEventArgs]
@@ -30,21 +25,10 @@ function Show-RefreshNetwork_psf
 		if ($checkboxRegisterDNS.Checked) { ipconfig /registerdns }
 	}
 	
-	$checkboxFlushDNS_CheckedChanged = {
-		# Empty
-	}
-	
-	$checkboxReleaseIP_CheckedChanged = {
-		# Empty
-	}
-	
-	$checkboxRenewIP_CheckedChanged = {
-		# Empty
-	}
-	
-	$checkboxRegisterDNS_CheckedChanged = {
-		# Empty
-	}
+	$checkboxFlushDNS_CheckedChanged = { # Empty }
+	$checkboxReleaseIP_CheckedChanged = { # Empty }
+	$checkboxRenewIP_CheckedChanged =  { # Empty }
+	$checkboxRegisterDNS_CheckedChanged = { # Empty }
 	
 	# region Generated Events
 	$Form_StateCorrection_Load =
@@ -69,8 +53,7 @@ function Show-RefreshNetwork_psf
 		}
 		catch { Out-Null <# Prevent PSScriptAnalyzer warning #> }
 	}
-	# endregion Generated Events
-	
+
 	# Form Code
 	$formRefreshNetwork.SuspendLayout()
 
@@ -162,8 +145,7 @@ function Show-RefreshNetwork_psf
 	$formRefreshNetwork.add_FormClosed($Form_Cleanup_FormClosed)
 	# Show the Form
 	return $formRefreshNetwork.ShowDialog()
-	
-} # End Function
+}
 
 # Call the form
 Show-RefreshNetwork_psf | Out-Null
